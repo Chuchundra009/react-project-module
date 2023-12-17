@@ -1,0 +1,47 @@
+@import '../../style/template';
+@import '../../style/vars';
+
+
+.addWord{
+
+    &__title{
+        padding: 1%;
+    }
+
+    &__title-text{
+        text-align: center;
+        @extend %title-text;
+    }
+
+    &__block{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        align-items: center;
+    }
+
+    &__input-text{
+        width: 100%;
+        padding: 2%;
+        box-shadow: 10px 5px 5px rgb(233, 207, 207);
+        border-radius: 20px;
+    }
+
+    &__input-text:focus{
+        box-shadow: 3px 3px 15px 5px rgb(216, 177, 104);
+        outline: none;
+    }
+
+    &__btn-text{
+        width: 100%;
+        padding: 2%;
+        border-radius: 20px;
+        border: 2px solid orange;
+        background-color: rgb(240, 241, 232);
+        cursor: pointer;
+    }
+
+    &__btn-text:hover {
+        background-color: rgba(109, 9, 109, 0.356);
+    }
+}

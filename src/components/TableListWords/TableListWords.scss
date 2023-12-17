@@ -1,0 +1,43 @@
+@import '../../style/template';
+@import '../../style/vars';
+
+.tlistwords {
+
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    grid-gap:4px;
+    margin-bottom: 1em;
+
+    &__list-text{
+        border: 1px solid rgb(124, 70, 70);
+        padding: 2%;
+        cursor: default;
+        @extend %text;
+    }
+
+    &__list-btns{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 1px solid rgb(124, 70, 70);
+        padding: 2%;
+    }
+
+    &__list-btnedit{
+        padding: 3px;
+        cursor: pointer;
+        background-color: white;
+        border: none;
+    }
+
+    &__list-btndel{
+        padding: 3px;
+        cursor: pointer;
+        background-color: white;
+        border: none;
+    }
+
+    &__list-img{
+        width: 20px;
+    }
+}

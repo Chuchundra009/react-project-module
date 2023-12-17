@@ -1,0 +1,14 @@
+@import '../../style/template';
+@import '../../style/vars';
+
+.mainTable{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container{
+        max-width: 1024px;
+        width: 100%;
+        margin: 2%;
+    }
+}

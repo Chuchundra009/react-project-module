@@ -1,0 +1,46 @@
+@import '../../style/template';
+@import '../../style/vars';
+
+
+.footer{
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    // height: 5vh;
+    width: 100%;
+
+  background: linear-gradient(7deg, rgba(117,37,161,1) 0%, rgba(246,178,2,1) 100%);
+
+  &__container {
+    max-width: 1024px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 20px;
+
+    flex-wrap: wrap;
+  }
+
+
+
+  &__btn-text{
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: rgba(72, 107, 223, 0.486);
+    border: 1px solid blue;
+    color: rgb(250, 248, 252);
+    text-transform: uppercase;
+    @extend %text;
+  }
+
+  &__btn-text:hover{
+    background-color: transparent;
+    border: none;
+  }
+}

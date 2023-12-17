@@ -1,0 +1,47 @@
+@import '../../style/template';
+@import '../../style/vars';
+
+$background-border-page:linear-gradient(7deg, rgba(246, 178, 2, 1) 0%, rgba(117, 37, 161, 1) 100%);
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+
+  background: $background-border-page;
+  border-radius: 0 0 20px 20px;
+
+
+  &__container {
+    max-width: 1024px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  &__nav {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+
+
+  &__btn-text{
+    cursor: pointer;
+    background-color: transparent;
+    padding: 4px 15px;
+    border-radius: 20px;
+    color: rgb(239, 240, 221);
+    border: none;
+    @extend %text;
+  }
+
+  &__btn-text:hover{
+    background-color: rgba(165, 42, 42, 0.815);
+    border: 1px solid rgb(107, 231, 221);
+  }
+}
