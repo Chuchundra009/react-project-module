@@ -1,0 +1,23 @@
+@import '../../style/template';
+@import '../../style/vars';
+
+
+.scard{
+    display: flex;
+    justify-content: center;
+
+
+    &__container{
+        border: 1px solid rgba(104, 92, 92, 0.507);
+        background-color: rgb(247, 235, 235);
+        padding: 7% 4%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        max-width: 15%;
+        width: 100%;
+        cursor: default;
+    }
+}
