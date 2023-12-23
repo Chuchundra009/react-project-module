@@ -5,9 +5,10 @@ import { useState } from 'react'
 
 export default function TableListWords({ english, transcription, russian, delWords, id }) {
     const [stEdit, setStEdit] = useState(false);
-    // const [textEnglisg, setTextEnglish] = useState(english);
-    // const [textTranscription, setTextTranscription]= useState(transcription)
-    // const [textRussian, setTextRussian] = useState(russian);
+    const [textEnglisg, setTextEnglish] = useState(english);
+    const [textTranscription, setTextTranscription]= useState(transcription)
+    const [textRussian, setTextRussian] = useState(russian);
+
 
     function closeRow() {
         setStEdit(true);
@@ -34,9 +35,9 @@ export default function TableListWords({ english, transcription, russian, delWor
             </td>
         </tr>
         ) : ( <tr className='tlistwords'>
-            <td className='tlistwords__list-text'><input type="text" value={english}/></td>
-            <td className='tlistwords__list-text'><input type="text" value={transcription}/></td>
-            <td className='tlistwords__list-text'><input type="text" value={russian}/></td>
+            <td className='tlistwords__list-text'><input type="text" value={textEnglisg} onChange={(event) =>{setTextEnglish(event.target.value)}}/></td>
+            <td className='tlistwords__list-text'><input type="text" value={textTranscription} onChange={(event) => {setTextTranscription(event.target.value)}}/></td>
+            <td className='tlistwords__list-text'><input type="text" value={textRussian} onChange={(event) => {setTextRussian(event.target.value)}}/></td>
 
             <td className='tlistwords__list-btns'>
                     <button className='tlistwords__list-btnedit' onClick={cancelAction}>отмена</button>

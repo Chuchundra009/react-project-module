@@ -10,6 +10,8 @@ export default function SectionListWords() {
     const favoritesWord= textWords.filter(item => item.id != id);
     setTextWords(favoritesWord);
   }
+
+
   return (
     <section className='slistwords'>
       <table className='slistwords__table'>
