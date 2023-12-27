@@ -1,34 +1,32 @@
 import './SectionCard.scss';
 import data from '../../data.json';
 import { useState } from 'react';
+import CardText from '../CardText/CardText';
 
 
 export default function SectionCard() {
-  // const [textInfo, setTextInfo] = useState(data);
-  const [stText, setStText] = useState(true);
-  // let cardText = data[Math.floor(Math.random()* data.length)];
+  const [indexText, setIndexText] = useState(0);
 
-  let cardText = data[1];
-
-  function offSeeText() {
-    setStText(false)
+  function prevCard() {
+    setIndexText(indexText => ((indexText <= 0) ? (data.length - 1) : (indexText - 1)));
   }
 
-  function onSeeText() {
-    setStText(true)
+
+  function nextCard() {
+    setIndexText(indexText => ((indexText >= data.length - 1) ? 0 : (indexText + 1)));
   }
 
   return (
-    <section className='scard'>
-      <div className='scard__container'>
-        <div className='scard__block'>
-          <h4 className='scard__block-word'>{cardText.english}</h4>
-          <p className='scard__block-transcr'>{cardText.transcription}</p>
+    <section className='card'>
+      <div className='card__container'>
+        <div className='card__btn'>
+          <button className='card__btn-text' onClick={prevCard}>Prev</button>
         </div>
-        <div className='scard__change'>
-          {stText ? (
-          <p className='scard__change-text' onClick={offSeeText}>Проверить</p>):(
-            <p className='scard__change-translation' onClick={onSeeText}>{cardText.russian}</p>)}
+        <div>
+          <CardText {...data[indexText]} />
+        </div>
+        <div className='card__btn'>
+          <button className='card__btn-text' onClick={nextCard}>Next</button>
         </div>
 
       </div>

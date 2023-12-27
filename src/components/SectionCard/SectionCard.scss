@@ -2,35 +2,64 @@
 @import '../../style/vars';
 
 
-.scard{
+// .scard{
+//     display: flex;
+//     justify-content: center;
+//     height: 20vh;
+//     @extend %text;
+
+
+//     &__container{
+//         border: 1px solid rgba(104, 92, 92, 0.507);
+//         background-color: rgb(247, 235, 235);
+//         border-radius: 20px;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: space-evenly;
+
+//         max-width: 15%;
+//         width: 100%;
+//         cursor: default;
+//     }
+
+//     &__change-text{
+//         background-color: orange;
+//         padding: 5px;
+//         border-radius: 20px;
+//     }
+
+//     &__change-translation{
+//         font-weight: 600;
+//         color: rgb(5, 80, 5);
+//     }
+// }
+
+
+.card{
     display: flex;
     justify-content: center;
-    height: 20vh;
-    @extend %text;
-
 
     &__container{
-        border: 1px solid rgba(104, 92, 92, 0.507);
-        background-color: rgb(247, 235, 235);
-        border-radius: 20px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: space-evenly;
-
-        max-width: 15%;
         width: 100%;
-        cursor: default;
     }
 
-    &__change-text{
-        background-color: orange;
-        padding: 5px;
+    &__btn{
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn-text{
+        padding: 35%;
         border-radius: 20px;
+        border: 1px solid grey;
+        cursor: pointer;
     }
 
-    &__change-translation{
-        font-weight: 600;
-        color: rgb(5, 80, 5);
+    &__btn-text:hover{
+        background-color: rgb(241, 229, 205);
     }
 }
+

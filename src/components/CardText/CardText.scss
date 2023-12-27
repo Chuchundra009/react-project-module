@@ -1,0 +1,40 @@
+@import '../../style/template';
+@import '../../style/vars';
+
+.scard{
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    @extend %text;
+    // max-width: 100%;
+    // width: 100%;
+    width: 13em;
+
+
+    &__container{
+        border: 1px solid rgba(104, 92, 92, 0.507);
+        background-color: rgb(247, 235, 235);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        // max-width: 15%;
+        width: 100%;
+        cursor: default;
+    }
+
+    &__change-text{
+        background-color: orange;
+        padding: 5px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    &__change-translation{
+        font-weight: 600;
+        color: rgb(5, 80, 5);
+        cursor: pointer;
+    }
+}
