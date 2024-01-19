@@ -1,19 +1,14 @@
 import './Footer.scss'
+import { NavLink } from 'react-router-dom'
 
 export default function Footer() {
     return (
         <footer className='footer'>
-            <div className='footer__container'>
-                <div className='footer__btn'>
-                    <button className='footer__btn-text'>Выученные</button>
-                </div>
-                <div className='footer__btn'>
-                    <button className='footer__btn-text'>Карточки слов</button>
-                </div>
-                <div className='footer__btn'>
-                    <button className='footer__btn-text'>Список слов</button>
-                </div>
-            </div>
+            <nav className='footer__container'>
+                <NavLink className='footer__btn' to='/ready'>Выученные</NavLink>
+                <NavLink className='footer__btn' to='./card'>Карточки слов</NavLink>
+                <NavLink className='footer__btn' to='./table'>Список слов</NavLink>
+            </nav>
         </footer>
     )
 }

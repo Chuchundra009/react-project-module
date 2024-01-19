@@ -9,8 +9,6 @@ export default function SectionListWords() {
   function delWords(id) {
     const favoritesWord = textWords.filter(item => item.id != id);
     setTextWords(favoritesWord);
-    console.log(textWords);
-    console.log(favoritesWord);
   }
 
 
@@ -25,7 +23,7 @@ export default function SectionListWords() {
             <th className='slistwords__tr-thtext'>Редактировать/Удалить</th>
           </tr>
         </thead>
-        {data.map(item => (
+        {textWords.map(item => (
           <TableListWords key={item.id} {...item} delWords={delWords} />
         ))}
       </table>

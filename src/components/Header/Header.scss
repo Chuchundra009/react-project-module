@@ -28,6 +28,12 @@ $background-border-page:linear-gradient(7deg, rgba(246, 178, 2, 1) 0%, rgba(117,
     justify-content: space-around;
   }
 
+  &__logo-img{
+    width: 7%;
+    border-radius: 70px;
+    cursor: pointer;
+  }
+
 
 
   &__btn-text{

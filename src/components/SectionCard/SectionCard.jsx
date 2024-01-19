@@ -23,7 +23,7 @@ export default function SectionCard() {
           <button className='card__btn-text' onClick={prevCard}>Prev</button>
         </div>
         <div>
-          <CardText {...data[indexText]} />
+          <CardText key={indexText} {...data[indexText]} />
         </div>
         <div className='card__btn'>
           <button className='card__btn-text' onClick={nextCard}>Next</button>

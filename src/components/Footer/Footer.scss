@@ -2,6 +2,7 @@
 @import '../../style/vars';
 
 
+
 .footer{
     margin-top: auto;
     position: absolute;
@@ -28,7 +29,7 @@
 
 
 
-  &__btn-text{
+  &__btn{
     cursor: pointer;
     padding: 10px 30px;
     border-radius: 10px;
@@ -37,9 +38,10 @@
     color: rgb(250, 248, 252);
     text-transform: uppercase;
     @extend %text;
+    text-decoration: none;
   }
 
-  &__btn-text:hover{
+  .active{
     background-color: transparent;
     border: none;
   }

@@ -31,6 +31,6 @@ export default function CardText({ english, transcription, russian }) {
                         <p className='scard__change-translation' onClick={onSeeText}>{russian}</p>)}
                 </div>
             </div>
-        </div>
+        </div> 
     )
 }
