@@ -14,7 +14,7 @@ function App() {
           <Route path="/card" element={<Card/>}/>
           <Route path="/table" element={<Table/>}/>
           <Route path="/ready" element={<Ready/>}/>
-          <Route path="/error" element={<Error/>}/>
+          <Route path="*" element={<Error/>}/>
         </Routes>
         <Footer />
     </BrowserRouter>

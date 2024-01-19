@@ -1,0 +1,16 @@
+@import '../../style/template';
+@import '../../style/vars';
+
+.pageerror {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    &__container{
+        @extend %container;
+        display: flex;
+        align-items: center;
+    }
+    &__img{
+        width: 90%;
+    }
+}
