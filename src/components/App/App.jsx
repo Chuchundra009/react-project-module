@@ -1,7 +1,6 @@
 import "./App.scss";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-// import MainTable from "../MainTable/MainTable";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import {Card, Home, Error, Ready, Table} from '../../Pages'
 

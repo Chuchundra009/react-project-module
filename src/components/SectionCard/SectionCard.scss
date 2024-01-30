@@ -5,6 +5,8 @@
 
 .card{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin: 5%;
 
@@ -28,6 +30,10 @@
 
     &__btn-text:hover{
         background-color: rgb(241, 229, 205);
+    }
+
+    &__teach{
+        margin-top: 3%;
     }
 }
 

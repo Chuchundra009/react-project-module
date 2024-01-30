@@ -27,14 +27,24 @@
 
     &__change-text{
         background-color: orange;
-        padding: 5px;
+        padding: 6px 20px;
         border-radius: 20px;
+        border: none;
         cursor: pointer;
+    }
+
+    &__change-text:focus{
+        outline: 2px dashed red;
+        outline-offset: 2px;
     }
 
     &__change-translation{
         font-weight: 600;
         color: rgb(5, 80, 5);
         cursor: pointer;
+    }
+
+    &__change{
+        user-select: none;
     }
 }
