@@ -11,6 +11,19 @@ export default function SectionListWords() {
     setTextWords(favoritesWord);
   }
 
+  function editRow(id, english, transcription, russian){
+    const copyArr = textWords.map(item => {
+      if(item.id === id){
+        item.english= english;
+        item.transcription = transcription;
+        item.russian = russian;
+        return item
+      }
+      return item
+    })
+    setTextWords(copyArr);
+  }
+
 
   return (
     <section className='slistwords'>
@@ -24,7 +37,7 @@ export default function SectionListWords() {
           </tr>
         </thead>
         {textWords.map(item => (
-          <TableListWords key={item.id} {...item} delWords={delWords} />
+          <TableListWords key={item.id} {...item} delWords={delWords} editRow={editRow} />
         ))}
       </table>
     </section>

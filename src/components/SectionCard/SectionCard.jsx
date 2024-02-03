@@ -11,8 +11,11 @@ export default function SectionCard() {
   const btnRef = useRef();
 
   useEffect(() =>{
-    btnRef.current.focus();
-  },[]);
+    //проверяем существует ли элемент и устанавливаем на него фокус
+    if(btnRef.current){
+      btnRef.current.focus();
+    }
+  },[indexText]);//добавляем indexText в массив зависимостей
 
   function prevCard() {
     setIndexText(indexText => ((indexText <= 0) ? (data.length - 1) : (indexText - 1)));
