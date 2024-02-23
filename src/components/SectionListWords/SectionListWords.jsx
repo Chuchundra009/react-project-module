@@ -1,18 +1,20 @@
 import './SectionListWords.scss'
 import TableListWords from '../tableListWords/tableListWords'
-import data from '../../data.json'
-import { useState } from 'react'
+
+import { MyContext } from "../../Context/MyContext";
+import { useContext } from "react";
 
 export default function SectionListWords() {
-  const [textWords, setTextWords] = useState(data);
+
+  const {words, setWords} = useContext(MyContext);
 
   function delWords(id) {
-    const favoritesWord = textWords.filter(item => item.id != id);
-    setTextWords(favoritesWord);
+    const favoritesWord = words.filter(item => item.id != id);
+    setWords(favoritesWord);
   }
 
   function editRow(id, english, transcription, russian){
-    const copyArr = textWords.map(item => {
+    const copyArr = words.map(item => {
       if(item.id === id){
         item.english= english;
         item.transcription = transcription;
@@ -21,7 +23,7 @@ export default function SectionListWords() {
       }
       return item
     })
-    setTextWords(copyArr);
+    setWords(copyArr);
   }
 
 
@@ -36,7 +38,7 @@ export default function SectionListWords() {
             <th className='slistwords__tr-thtext'>Редактировать/Удалить</th>
           </tr>
         </thead>
-        {textWords.map(item => (
+        {words.map(item => (
           <TableListWords key={item.id} {...item} delWords={delWords} editRow={editRow} />
         ))}
       </table>

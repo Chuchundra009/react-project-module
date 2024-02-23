@@ -3,14 +3,14 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import {Card, Home, Error, Ready, Table} from '../../Pages'
-import { MyContext } from "../../Context/MyContext";
-import { useContext } from "react";
+// import { MyContext } from "../../Context/MyContext";
+// import { useContext } from "react";
 
 
 
 function App() {
-  const {words, setWords} = useContext(MyContext);
-  console.log(words);
+  // const {words, setWords} = useContext(MyContext);
+  // console.log(words);
   return (
     <BrowserRouter>
         <Header />

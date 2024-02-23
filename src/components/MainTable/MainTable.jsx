@@ -10,7 +10,6 @@ export default function MainTable() {
       <div className='mainTable__container'>
         <SectionAddWord />
         <SectionListWords/>
-        {/* <SectionCard/> */}
       </div>
     </main>
   )

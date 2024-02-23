@@ -3,10 +3,15 @@ import data from '../../data.json';
 import { useEffect, useRef, useState } from 'react';
 import CardText from '../CardText/CardText';
 
+import { MyContext } from "../../Context/MyContext";
+import { useContext } from "react";
+
 
 export default function SectionCard() {
   const [indexText, setIndexText] = useState(0);
   const [num, setNum] = useState([0]);
+
+  const {words} = useContext(MyContext);
 
   const btnRef = useRef();
 
@@ -18,12 +23,12 @@ export default function SectionCard() {
   },[indexText]);//добавляем indexText в массив зависимостей
 
   function prevCard() {
-    setIndexText(indexText => ((indexText <= 0) ? (data.length - 1) : (indexText - 1)));
+    setIndexText(indexText => ((indexText <= 0) ? (words.length - 1) : (indexText - 1)));
   }
 
 
   function nextCard() {
-    setIndexText(indexText => ((indexText >= data.length - 1) ? 0 : (indexText + 1)));
+    setIndexText(indexText => ((indexText >= words.length - 1) ? 0 : (indexText + 1)));
   }
 
   function addNum(){
@@ -38,7 +43,7 @@ export default function SectionCard() {
           <button className='card__btn-text' onClick={prevCard}>Prev</button>
         </div>
         <div>
-          <CardText key={indexText} {...data[indexText]} addNum={addNum} ref={btnRef}/>
+          <CardText key={indexText} {...words[indexText]} addNum={addNum} ref={btnRef}/>
         </div>
         <div className='card__btn'>
           <button className='card__btn-text' onClick={nextCard}>Next</button>
